@@ -1,10 +1,10 @@
 {
   "name": "gendiff-bukharovev",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Study project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
     "prepublishOnly": "npm run build"
   },
@@ -18,11 +18,14 @@
     "eslint": "^5.15.3",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-babel": "^5.3.0",
-    "eslint-plugin-import": "^2.16.0"
+    "eslint-plugin-import": "^2.16.0",
+    "jest": "^24.5.0"
   },
   "dependencies": {
     "babel-eslint": "^10.0.1",
-    "commander": "^2.19.0"
+    "commander": "^2.19.0",
+    "eslint-plugin-jest": "^22.4.1",
+    "lodash": "^4.17.11"
   },
   "bin": {
     "gendiff": "dist/bin/gendiff.js"

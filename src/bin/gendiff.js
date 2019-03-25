@@ -1,9 +1,5 @@
 #!/usr/bin/env node
 
-/**
- * Module dependencies.
- */
-
 import program from 'commander';
 import { version } from '../../package.json';
 
