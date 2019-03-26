@@ -2,8 +2,8 @@ import _ from 'lodash';
 import fs from 'fs';
 
 const genDiff = (path1, path2) => {
-  const obj1 = JSON.parse(fs.readFileSync(path1));
-  const obj2 = JSON.parse(fs.readFileSync(path2));
+  const obj1 = fs.readFileSync(path1);
+  const obj2 = fs.readFileSync(path2);
   const keys = _.union(_.keys(obj1), _.keys(obj2));
   const result = keys.reduce((acc, key) => {
     if (_.isEqual(obj1[key], obj2[key])) {
