@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import fs from 'fs';
 import path from 'path';
-import parser from './parsers';
+import parse from './parsers';
 
 const propertyTypes = [
   {
@@ -33,8 +33,8 @@ const genDiff = (pathFile1, pathFile2) => {
   const formatFile1 = path.extname(pathFile1).substr(1);
   const formatFile2 = path.extname(pathFile2).substr(1);
 
-  const obj1 = parser(dataFile1, formatFile1);
-  const obj2 = parser(dataFile2, formatFile2);
+  const obj1 = parse(dataFile1, formatFile1);
+  const obj2 = parse(dataFile2, formatFile2);
 
   const keys = _.union(_.keys(obj1), _.keys(obj2));
   const result = keys.map((key) => {
