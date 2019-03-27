@@ -7,4 +7,4 @@ const fileFormats = {
   ini: ini.parse,
 };
 
-export default (data, format) => fileFormats[format](data);
+export default (dataFile, formatFile) => fileFormats[formatFile](dataFile);

@@ -26,23 +26,23 @@ const propertyTypes = [
 const getPropertyTypes = (obj1, obj2, key) => (
   propertyTypes.find(({ check }) => check(obj1, obj2, key)));
 
-const genDiff = (path1, path2) => {
-  const data1 = fs.readFileSync(path1, 'utf-8');
-  const data2 = fs.readFileSync(path2, 'utf-8');
+const genDiff = (pathFile1, pathFile2) => {
+  const dataFile1 = fs.readFileSync(pathFile1, 'utf-8');
+  const dataFile2 = fs.readFileSync(pathFile2, 'utf-8');
 
-  const format1 = path.extname(path1).substr(1);
-  const format2 = path.extname(path2).substr(1);
+  const formatFile1 = path.extname(pathFile1).substr(1);
+  const formatFile2 = path.extname(pathFile2).substr(1);
 
-  const obj1 = parser(data1, format1);
-  const obj2 = parser(data2, format2);
+  const obj1 = parser(dataFile1, formatFile1);
+  const obj2 = parser(dataFile2, formatFile2);
 
   const keys = _.union(_.keys(obj1), _.keys(obj2));
-  const res = keys.map((key) => {
+  const result = keys.map((key) => {
     const { process } = getPropertyTypes(obj1, obj2, key);
     return process(obj1, obj2, key);
   });
-  const result = `{\n${res.join('\n')}\n}`;
-  return result;
+  const output = `{\n${result.join('\n')}\n}`;
+  return output;
 };
 
 export default genDiff;
