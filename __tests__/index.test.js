@@ -14,3 +14,10 @@ test('diff YAML', () => {
   const result = String(fs.readFileSync('__tests__/__fixtures__/expected.txt'));
   expect(genDiff(before, after)).toBe(result);
 });
+
+test('diff INI', () => {
+  const before = '__tests__/__fixtures__/before.ini';
+  const after = '__tests__/__fixtures__/after.ini';
+  const result = String(fs.readFileSync('__tests__/__fixtures__/expected.txt'));
+  expect(genDiff(before, after)).toBe(result);
+});
