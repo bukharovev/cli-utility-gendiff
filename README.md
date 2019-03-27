@@ -5,3 +5,5 @@
 add json: https://asciinema.org/a/eh0uVVpMHBZU1WaxQg5YLmNVm
 
 add yaml: https://asciinema.org/a/6c16QuJyL9g9ZXgh2V9rWDBha
+
+add ini: https://asciinema.org/a/xSDxNGvZZTEI6Tbx8jIAseSZ6
