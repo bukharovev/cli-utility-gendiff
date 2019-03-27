@@ -1,5 +1,7 @@
 import _ from 'lodash';
 import fs from 'fs';
+import path from 'path';
+import parse from './parsers';
 
 const propertyTypes = [
   {
@@ -25,8 +27,15 @@ const getPropertyTypes = (obj1, obj2, key) => (
   propertyTypes.find(({ check }) => check(obj1, obj2, key)));
 
 const genDiff = (path1, path2) => {
-  const obj1 = JSON.parse(fs.readFileSync(path1));
-  const obj2 = JSON.parse(fs.readFileSync(path2));
+  const data1 = fs.readFileSync(path1);
+  const data2 = fs.readFileSync(path2);
+
+  const format1 = path.extname(path1).substr(1);
+  const format2 = path.extname(path2).substr(1);
+
+  const obj1 = parse(data1, format1);
+  const obj2 = parse(data2, format2);
+
   const keys = _.union(_.keys(obj1), _.keys(obj2));
   const res = keys.map((key) => {
     const { process } = getPropertyTypes(obj1, obj2, key);
@@ -35,6 +44,5 @@ const genDiff = (path1, path2) => {
   const result = `{\n${res.join('\n')}\n}`;
   return result;
 };
-
 
 export default genDiff;
