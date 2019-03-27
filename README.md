@@ -2,4 +2,6 @@
 [![Build Status](https://travis-ci.org/bukharovev/project-lvl2-s455.svg?branch=master)](https://travis-ci.org/bukharovev/project-lvl2-s455)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/90617fa24b6166d89156/test_coverage)](https://codeclimate.com/github/bukharovev/project-lvl2-s455/test_coverage)
 
-step 2: https://asciinema.org/a/eh0uVVpMHBZU1WaxQg5YLmNVm
+add json: https://asciinema.org/a/eh0uVVpMHBZU1WaxQg5YLmNVm
+
+add yaml: https://asciinema.org/a/6c16QuJyL9g9ZXgh2V9rWDBha
