@@ -36,7 +36,7 @@ ${indentSize(depth + 1)}+ ${key}: ${stringify(newValue, depth + 2)}`),
 
 const getPropertyActionType = arg => propertyActionTypes.find(({ check }) => check(arg.type));
 
-const render = (ast, depth) => {
+const render = (ast, depth = 0) => {
   const result = ast.map((obj) => {
     const {
       key,
@@ -51,4 +51,4 @@ const render = (ast, depth) => {
   return output;
 };
 
-export default ast => `{\n${render(ast, 0)}\n }`;
+export default ast => `{\n${render(ast, 0)}\n}`;
