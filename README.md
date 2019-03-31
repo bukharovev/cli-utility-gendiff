@@ -10,4 +10,6 @@ add ini: https://asciinema.org/a/xSDxNGvZZTEI6Tbx8jIAseSZ6
 
 step 5: https://asciinema.org/a/jZMbtw4H1TwzUSOjbOIss62LI
 
-add outputFormat plain: https://asciinema.org/a/nNNTuwlYJr8X1sxq6mI6bcp8Z
+add output format plain: https://asciinema.org/a/nNNTuwlYJr8X1sxq6mI6bcp8Z
+
+add output format json: https://asciinema.org/a/I2Lr7g9fBn6V97UVeWgKsrRWy

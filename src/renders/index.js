@@ -1,9 +1,11 @@
-import renderDefault from './render';
-import renderToPlain from './renderToPlain';
+import standard from './renderStandard';
+import plain from './renderToPlain';
+import json from './renderToJson';
 
-export default (ast, format) => {
-  if (format === 'plain') {
-    return renderToPlain(ast);
-  }
-  return renderDefault(ast);
+const outputFormats = {
+  standard,
+  plain,
+  json,
 };
+
+export default (ast, format) => outputFormats[format](ast);

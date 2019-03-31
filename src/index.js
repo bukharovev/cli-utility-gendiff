@@ -4,7 +4,7 @@ import parse from './parsers';
 import createAst from './createAst';
 import render from './renders';
 
-const genDiff = (pathFile1, pathFile2, outputFormat) => {
+const genDiff = (pathFile1, pathFile2, outputFormat = 'standard') => {
   const dataFile1 = fs.readFileSync(pathFile1, 'utf-8');
   const dataFile2 = fs.readFileSync(pathFile2, 'utf-8');
 
@@ -17,6 +17,7 @@ const genDiff = (pathFile1, pathFile2, outputFormat) => {
   const ast = createAst(obj1, obj2);
 
   const output = render(ast, outputFormat);
+
   return output;
 };
 
