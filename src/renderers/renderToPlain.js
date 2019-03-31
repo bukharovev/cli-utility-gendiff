@@ -8,17 +8,12 @@ const stringify = (value) => {
   return value;
 };
 
-const renderParent = (parent) => {
-  if (parent) {
-    return `${parent}.`;
-  }
-  return '';
-};
+const renderParent = parent => (parent ? `${parent}.` : '');
 
 const propertyActions = {
   added: ((parent, type, key, oldValue, newValue) => `Property '${renderParent(parent)}${key}' was ${type} with value: ${stringify(newValue)}`),
 
-  unchanged: () => '',
+  unchanged: () => null,
 
   deleted: ((parent, type, key) => `Property '${renderParent(parent)}${key}' was ${type}`),
 
