@@ -35,7 +35,7 @@ const render = (ast, depth = 0) => {
 
     return propertyActions[type](depth, key, oldValue, newValue, children, render);
   });
-  const output = result.join('\n');
+  const output = _.flatten(result).join('\n');
   return output;
 };
 
