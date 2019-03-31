@@ -12,29 +12,29 @@ const stringify = (value, depth) => {
 
 const propertyActions = [
   {
-    check: arg => arg === 'added',
+    checkType: arg => arg === 'added',
     process: ((depth, key, oldValue, newValue) => `${indentSize(depth + 1)}+ ${key}: ${stringify(newValue, depth + 2)}`),
   },
   {
-    check: arg => arg === 'unchanged',
+    checkType: arg => arg === 'unchanged',
     process: ((depth, key, oldValue) => `${indentSize(depth + 1)}  ${key}: ${stringify(oldValue, depth + 2)}`),
   },
   {
-    check: arg => arg === 'deleted',
+    checkType: arg => arg === 'deleted',
     process: ((depth, key, oldValue) => `${indentSize(depth + 1)}- ${key}: ${stringify(oldValue, depth + 2)}`),
   },
   {
-    check: arg => arg === 'changed',
+    checkType: arg => arg === 'changed',
     process: ((depth, key, oldValue, newValue) => `${indentSize(depth + 1)}- ${key}: ${stringify(oldValue, depth + 2)}
 ${indentSize(depth + 1)}+ ${key}: ${stringify(newValue, depth + 2)}`),
   },
   {
-    check: arg => arg === 'nested',
+    checkType: arg => arg === 'nested',
     process: ((depth, key, oldValue, newValue, children, render) => `${indentSize(depth + 2)}${key}: {\n${render(children, depth + 2)}\n${indentSize(depth + 2)}}`),
   },
 ];
 
-const getPropertyAction = arg => propertyActions.find(({ check }) => check(arg.type));
+const getPropertyAction = arg => propertyActions.find(({ checkType }) => checkType(arg.type));
 
 const render = (ast, depth = 0) => {
   const result = ast.map((obj) => {
