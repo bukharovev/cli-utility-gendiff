@@ -7,4 +7,4 @@ const dataTypes = {
   ini: ini.parse,
 };
 
-export default (dataFile, format) => dataTypes[format](dataFile);
+export default (data, format) => dataTypes[format](data);
