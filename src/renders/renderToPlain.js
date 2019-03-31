@@ -38,8 +38,8 @@ const render = (ast, parent) => {
     } = obj;
     return propertyActions[type](parent, type, key, oldValue, newValue, children, render);
   });
-  const output = result.join('\n');
-  return output.replace(/\n+/g, '\n').trim();
+  const output = result.filter(node => node).join('\n');
+  return output;
 };
 
 export default ast => render(ast, '');
