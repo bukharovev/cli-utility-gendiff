@@ -22,7 +22,7 @@ const formatsFile = [
   ['nested', 'json', 'ini'],
 ];
 
-test.each(formatsFile)('%s diff %s %s', (folder, outputFormat, format) => {
+test.each(formatsFile)('%s diff from %s to %s', (folder, outputFormat, format) => {
   const before = `__tests__/__fixtures__/__${folder}__/before.${format}`;
   const after = `__tests__/__fixtures__/__${folder}__/after.${format}`;
   const result = fs.readFileSync(`__tests__/__fixtures__/__${folder}__/${outputFormat}.txt`, 'utf-8');
