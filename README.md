@@ -9,3 +9,5 @@ add yaml: https://asciinema.org/a/6c16QuJyL9g9ZXgh2V9rWDBha
 add ini: https://asciinema.org/a/xSDxNGvZZTEI6Tbx8jIAseSZ6
 
 step 5: https://asciinema.org/a/jZMbtw4H1TwzUSOjbOIss62LI
+
+add outputFormat plain: https://asciinema.org/a/nNNTuwlYJr8X1sxq6mI6bcp8Z

@@ -1,6 +1,6 @@
 {
   "name": "gendiff-bukharovev",
-  "version": "1.4.0",
+  "version": "1.5.2",
   "description": "Study project",
   "main": "index.js",
   "scripts": {
@@ -42,7 +42,8 @@
     "gendiff": "dist/bin/gendiff.js"
   },
   "keywords": [
-    "gendiff"
+    "gendiff",
+    "cli-utils"
   ],
   "files": [
     "dist"

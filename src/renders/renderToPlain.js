@@ -16,13 +16,13 @@ const renderParent = (parent) => {
 };
 
 const propertyActions = {
-  added: ((parent, type, key, oldValue, newValue) => `Property ${renderParent(parent)}${key} was ${type} with value: ${stringify(newValue)}`),
+  added: ((parent, type, key, oldValue, newValue) => `Property '${renderParent(parent)}${key}' was ${type} with value: ${stringify(newValue)}`),
 
   unchanged: () => '',
 
-  deleted: ((parent, type, key) => `Property ${renderParent(parent)}${key} was ${type}`),
+  deleted: ((parent, type, key) => `Property '${renderParent(parent)}${key}' was ${type}`),
 
-  changed: ((parent, type, key, oldValue, newValue) => `Property ${renderParent(parent)}${key} was ${type}. From ${stringify(oldValue)} to ${stringify(newValue)}`),
+  changed: ((parent, type, key, oldValue, newValue) => `Property '${renderParent(parent)}${key}' was ${type}. From ${stringify(oldValue)} to ${stringify(newValue)}`),
 
   nested: ((parent, type, key, oldValue, newValue, children, render) => `${render(children, `${renderParent(parent)}${key}`)}`),
 };
@@ -39,7 +39,7 @@ const render = (ast, parent) => {
     return propertyActions[type](parent, type, key, oldValue, newValue, children, render);
   });
   const output = result.join('\n');
-  return output;
+  return output.replace(/\n+/g, '\n').trim();
 };
 
 export default ast => render(ast, '');
