@@ -2,11 +2,11 @@ import _ from 'lodash';
 
 const propertyAction = [
   {
-    check: ((obj1, obj2, key) => obj1[key] instanceof Object && obj2[key] instanceof Object),
-    process: ((obj1, obj2, key, createChild) => ({
+    check: ((obj1, obj2, key) => _.isUndefined(obj2[key])),
+    process: ((obj1, obj2, key) => ({
       key,
-      type: 'nested',
-      children: createChild(obj1[key], obj2[key]),
+      type: 'deleted',
+      oldValue: obj1[key],
     })),
   },
   {
@@ -26,11 +26,11 @@ const propertyAction = [
     })),
   },
   {
-    check: ((obj1, obj2, key) => _.isUndefined(obj2[key])),
-    process: ((obj1, obj2, key) => ({
+    check: ((obj1, obj2, key) => obj1[key] instanceof Object && obj2[key] instanceof Object),
+    process: ((obj1, obj2, key, createChild) => ({
       key,
-      type: 'deleted',
-      oldValue: obj1[key],
+      type: 'nested',
+      children: createChild(obj1[key], obj2[key]),
     })),
   },
   {
