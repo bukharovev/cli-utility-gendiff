@@ -10,7 +10,7 @@ const stringify = (value, depth) => {
   return ['{', ...result, `${indentSize(depth)}}`].join('\n');
 };
 
-const propertyActionTypes = [
+const propertyActions = [
   {
     check: arg => arg === 'added',
     process: ((depth, key, oldValue, newValue) => `${indentSize(depth + 1)}+ ${key}: ${stringify(newValue, depth + 2)}`),
@@ -34,7 +34,7 @@ ${indentSize(depth + 1)}+ ${key}: ${stringify(newValue, depth + 2)}`),
   },
 ];
 
-const getPropertyActionType = arg => propertyActionTypes.find(({ check }) => check(arg.type));
+const getPropertyAction = arg => propertyActions.find(({ check }) => check(arg.type));
 
 const render = (ast, depth = 0) => {
   const result = ast.map((obj) => {
@@ -44,7 +44,7 @@ const render = (ast, depth = 0) => {
       newValue,
       children,
     } = obj;
-    const { process } = getPropertyActionType(obj);
+    const { process } = getPropertyAction(obj);
     return process(depth, key, oldValue, newValue, children, render);
   });
   const output = result.join('\n');
