@@ -7,13 +7,14 @@
 ```
 npm install gendiff-bukharovev -global
 ```
-Usage
-- - - 
+
+### Usage
+
 ```
 gendiff --format json before.yaml after.yaml
 ```
 
-###Help
+### Help
 
 ```
 gendiff -h
