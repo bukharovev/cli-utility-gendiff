@@ -13,3 +13,12 @@ step 5: https://asciinema.org/a/jZMbtw4H1TwzUSOjbOIss62LI
 add output format plain: https://asciinema.org/a/nNNTuwlYJr8X1sxq6mI6bcp8Z
 
 add output format json: https://asciinema.org/a/I2Lr7g9fBn6V97UVeWgKsrRWy
+
+>Usage: gendiff [options] <firstConfig> <secondConfig>
+
+Compares two configuration files and shows a difference.
+
+Options:
+  -V, --version        output the version number
+  -f, --format [type]  Output formats: standard, plain, json
+  -h, --help           output usage information
