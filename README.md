@@ -38,13 +38,13 @@ Options:
 ```
 ### Examples 
 
-json: https://asciinema.org/a/eh0uVVpMHBZU1WaxQg5YLmNVm
+input json: https://asciinema.org/a/eh0uVVpMHBZU1WaxQg5YLmNVm
 
-yaml: https://asciinema.org/a/6c16QuJyL9g9ZXgh2V9rWDBha
+input yaml: https://asciinema.org/a/6c16QuJyL9g9ZXgh2V9rWDBha
 
-ini: https://asciinema.org/a/xSDxNGvZZTEI6Tbx8jIAseSZ6
+input ini: https://asciinema.org/a/xSDxNGvZZTEI6Tbx8jIAseSZ6
 
-step 5: https://asciinema.org/a/jZMbtw4H1TwzUSOjbOIss62LI
+output format standard: https://asciinema.org/a/GdrUyLz2Rkfh7UaxWgJex5L2J
 
 output format plain: https://asciinema.org/a/nNNTuwlYJr8X1sxq6mI6bcp8Z
 
