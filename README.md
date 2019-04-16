@@ -4,9 +4,11 @@
 
 ### Description
 Utility to find differences in configuration files.
+
 Utility features:
 
 Format support json, yaml, ini
+
 Generating a report in the form of plain text, standard and json
  
 ### Installation
