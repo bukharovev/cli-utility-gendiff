@@ -38,7 +38,7 @@ Options:
 ```
 ### Examples 
 
-input json: https://asciinema.org/a/eh0uVVpMHBZU1WaxQg5YLmNVm
+[![Watch the video](input json: https://asciinema.org/a/eh0uVVpMHBZU1WaxQg5YLmNVm)]
 
 input yaml: https://asciinema.org/a/6c16QuJyL9g9ZXgh2V9rWDBha
 
