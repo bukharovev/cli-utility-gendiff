@@ -1,6 +1,6 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/90617fa24b6166d89156/maintainability)](https://codeclimate.com/github/bukharovev/project-lvl2-s455/maintainability)
 [![Build Status](https://travis-ci.org/bukharovev/cli-utility-gendiff.svg?branch=master)](https://travis-ci.org/bukharovev/cli-utility-gendiff)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/60ac52d08aa6dd4905005fd5/test_coverage)](https://codeclimate.com/github/bukharovev/cli-utility-gendiff/test_coverage)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/285774dc237bbcf71bef/test_coverage)](https://codeclimate.com/github/bukharovev/cli-utility-gendiff/test_coverage)
 
 ### Description
 Utility to find differences in configuration files.
